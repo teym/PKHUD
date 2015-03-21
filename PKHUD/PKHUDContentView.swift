@@ -35,7 +35,7 @@ import QuartzCore
 /// Provides a wide, three line text view, which you can use to display information.
 @objc public class PKHUDTextView: PKHUDWideBaseView {
     public init(text: String?) {
-        super.init()
+        super.init(frame: CGRect(origin: CGPointZero, size: CGSize(width: 265.0, height: 90.0)))
         commonInit(text)
     }
     
@@ -70,7 +70,7 @@ import QuartzCore
 /// Provides a square view, which you can use to display a single image.
 @objc public class PKHUDImageView: PKHUDSquareBaseView {
     public init(image: UIImage?) {
-        super.init()
+        super.init(frame: CGRect(origin: CGPointZero, size: CGSize(width: 156.0, height: 156.0)))
         commonInit(image)
     }
     
@@ -129,7 +129,7 @@ import QuartzCore
 //// Provides the system UIActivityIndicatorView as an alternative.
 @objc public final class PKHUDSystemActivityIndicatorView: UIView {
     
-    required public override init() {
+    required public init() {
         super.init(frame: CGRectMake(0.0, 0.0, 120.0, 120.0))
         self.commonInit()
     }

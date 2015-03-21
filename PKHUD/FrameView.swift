@@ -10,7 +10,7 @@ import UIKit
 
 /// Provides the general look and feel of the PKHUD, into which the eventual content is inserted.
 internal class FrameView: UIView {
-    internal override init() {
+    internal required init() {
         super.init(frame: CGRectZero)
         commonInit()
     }
