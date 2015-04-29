@@ -16,6 +16,6 @@ import UIKit
     
     internal class func bundledImage(named name: String) -> UIImage {
         let bundle = NSBundle(forClass: PKHUDAssets.self)
-        return UIImage(named: name, inBundle:bundle, compatibleWithTraitCollection:nil)!
+        return UIImage(named: name)!
     }
 }
