@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D113c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fUS-nh-a92">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fUS-nh-a92">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -50,21 +50,6 @@
                                     <action selector="showTitleHUD:" destination="fUS-nh-a92" eventType="touchUpInside" id="cix-lk-cqi"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wkr-90-mst">
-                                <rect key="frame" x="20" y="445" width="560" height="40"/>
-                                <color key="backgroundColor" white="1" alpha="0.66000000000000003" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="sop-Hv-1gM"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Show Subtitled HUD">
-                                    <color key="titleColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="showSubtitleHUD:" destination="fUS-nh-a92" eventType="touchUpInside" id="7dl-JX-wNJ"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="anS-2E-3FN">
                                 <rect key="frame" x="20" y="493" width="560" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="0.66000000000000003" colorSpace="calibratedWhite"/>
@@ -107,7 +92,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="showProgressHUD:" destination="fUS-nh-a92" eventType="touchUpInside" id="Vab-Vq-WXE"/>
                                     <action selector="showStatusHUD:" destination="fUS-nh-a92" eventType="touchUpInside" id="r0A-Sy-xST"/>
                                 </connections>
                             </button>
@@ -126,14 +110,46 @@
                                     <action selector="showAppleProgressHUD:" destination="fUS-nh-a92" eventType="touchUpInside" id="nNy-vm-DmZ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqY-e5-2On">
+                                <rect key="frame" x="20" y="205" width="560" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="0.66000000000000003" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="71s-Fm-31M"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Show Spinner HUD">
+                                    <color key="titleColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showSpinnerHUD:" destination="fUS-nh-a92" eventType="touchUpInside" id="oES-0c-Lc6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wkr-90-mst">
+                                <rect key="frame" x="20" y="445" width="560" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="0.66000000000000003" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="sop-Hv-1gM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Show Subtitled HUD">
+                                    <color key="titleColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showSubtitleHUD:" destination="fUS-nh-a92" eventType="touchUpInside" id="7dl-JX-wNJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="nOA-ax-T4A" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ZJE-RV-lYd" secondAttribute="leading" constant="20" id="4e7-kJ-bME"/>
                             <constraint firstAttribute="trailing" secondItem="9dj-k6-s89" secondAttribute="trailing" constant="20" id="4jU-K5-Yrt"/>
+                            <constraint firstAttribute="trailing" secondItem="dqY-e5-2On" secondAttribute="trailing" constant="20" id="5dz-DO-yQv"/>
                             <constraint firstItem="9dj-k6-s89" firstAttribute="top" secondItem="anS-2E-3FN" secondAttribute="bottom" constant="8" id="79S-pj-shS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="LCJ-X8-NXp" secondAttribute="trailing" constant="4" id="CMp-5B-UWx"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="nOA-ax-T4A" secondAttribute="trailing" constant="20" id="J0o-a0-s8W"/>
+                            <constraint firstItem="dqY-e5-2On" firstAttribute="leading" secondItem="ZJE-RV-lYd" secondAttribute="leading" constant="20" id="LA1-Dn-tiz"/>
                             <constraint firstItem="9dj-k6-s89" firstAttribute="leading" secondItem="ZJE-RV-lYd" secondAttribute="leading" constant="20" id="Miw-ga-2Vf"/>
                             <constraint firstItem="LCJ-X8-NXp" firstAttribute="top" secondItem="1Gc-2A-3TB" secondAttribute="bottom" constant="8" id="Myw-hJ-oLN"/>
                             <constraint firstItem="aeK-ZH-rl7" firstAttribute="leading" secondItem="ZJE-RV-lYd" secondAttribute="leading" constant="20" id="P3A-LV-cFf"/>
@@ -146,6 +162,7 @@
                             <constraint firstAttribute="trailing" secondItem="aeK-ZH-rl7" secondAttribute="trailing" constant="20" id="cqw-fA-Z5o"/>
                             <constraint firstItem="Wkr-90-mst" firstAttribute="leading" secondItem="ZJE-RV-lYd" secondAttribute="leading" constant="20" id="ecu-Hg-6He"/>
                             <constraint firstItem="QUK-0M-drm" firstAttribute="leading" secondItem="ZJE-RV-lYd" secondAttribute="leading" id="gdT-GE-icr"/>
+                            <constraint firstItem="aeK-ZH-rl7" firstAttribute="top" secondItem="dqY-e5-2On" secondAttribute="bottom" constant="8" id="k3z-bw-RQX"/>
                             <constraint firstAttribute="trailing" secondItem="Wkr-90-mst" secondAttribute="trailing" constant="20" id="kDv-0Q-bhZ"/>
                             <constraint firstAttribute="trailing" secondItem="anS-2E-3FN" secondAttribute="trailing" constant="20" id="lC2-dW-MNm"/>
                             <constraint firstAttribute="trailing" secondItem="nOA-ax-T4A" secondAttribute="trailing" constant="20" id="mye-OP-nXH"/>

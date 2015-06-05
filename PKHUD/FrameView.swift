@@ -21,11 +21,15 @@ internal class FrameView: UIView {
     }
     
     private func commonInit() {
-        backgroundColor = UIColor(white: 0.8, alpha: 0.36)
+//        backgroundColor = UIColor(white: 0.8, alpha: 0.6)
         layer.cornerRadius = 9.0
         layer.masksToBounds = true
         
-        self.addSubview(self.content)
+        _blurView = UIVisualEffectView(effect: UIBlurEffect(style: .Light))
+        _blurView.frame = bounds
+        addSubview(_blurView)
+        
+        _blurView.contentView.addSubview(self.content)
         
         let offset = 20.0
         
@@ -42,7 +46,7 @@ internal class FrameView: UIView {
         
         addMotionEffect(group)
     }
-    
+    private var _blurView:UIVisualEffectView!
     private var _content = UIView()
     internal var content: UIView {
         get {
@@ -51,11 +55,12 @@ internal class FrameView: UIView {
         set {
             _content.removeFromSuperview()
             _content = newValue
-            _content.alpha = 0.85
+            _content.alpha = 1.0
             _content.clipsToBounds = true
             _content.contentMode = .Center
             frame.size = _content.bounds.size
-            addSubview(_content)
+            _blurView.frame = bounds
+            _blurView.contentView.addSubview(_content)
         }
     }
 }

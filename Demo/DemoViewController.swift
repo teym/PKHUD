@@ -53,6 +53,18 @@ class DemoViewController: UIViewController {
         PKHUD.sharedHUD.hide(afterDelay: 2.0)
     }
     
+    @IBAction func showSpinnerHUD(sender:AnyObject) {
+        let spinner = PKHUDSpinner(title: "")
+        PKHUD.sharedHUD.contentView = spinner
+        PKHUD.sharedHUD.show()
+        
+        spinner.update("Start…", animated: true)
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(1 * Double(NSEC_PER_SEC))), dispatch_get_main_queue()) {
+            spinner.update("Done...", animated: false)
+            PKHUD.sharedHUD.hide(afterDelay: 1.0)
+        }
+    }
+    
     @IBAction func showAlertWithHUD(sender: AnyObject) {
         let alert = UIAlertController(title: "An Alert", message: "With an Extraordinary Message", preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default, handler: nil))
